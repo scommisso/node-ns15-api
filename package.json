@@ -1,0 +1,47 @@
+{
+  "name": "ns15-api",
+  "version": "0.0.1",
+  "description": "Hosts an API for dealing with widget and sprocket data",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scommisso/node-ns15-api.git"
+  },
+  "keywords": [
+    "node",
+    "summit",
+    "demo"
+  ],
+  "author": "Stephen Commisso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scommisso/node-ns15-api/issues"
+  },
+  "homepage": "https://github.com/scommisso/node-ns15-api",
+  "dependencies": {
+    "express": "^4.11.2",
+    "ns15-sprockets": "0.0.1",
+    "ns15-widgets": "0.0.1"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "istanbul": "~0.2.11",
+    "jscs": "~1.8.0",
+    "jshint": "~2.5.10",
+    "mocha": "~1.21.4",
+    "mocha-istanbul": "~0.2.0",
+    "proxyquire": "~1.0.1",
+    "sinon": "~1.10.2",
+    "sinon-chai": "~2.5.0"
+  },
+  "scripts": {
+    "jscs": "jscs --config .jscsrc lib/ test/",
+    "jshint": "jshint lib && jshint test",
+    "mocha": "mocha -w -R spec",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "report": "istanbul report cobertura",
+    "pretest": "npm run jshint && npm run jscs",
+    "start": "node index",
+    "test": "npm run cover && npm run report"
+  }
+}
